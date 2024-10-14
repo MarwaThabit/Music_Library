@@ -31,15 +31,21 @@ header,header>a{
 .cart i,i .cart {
     display: none;
 }
-.cart>p,main section figure figcaption,main h1{
+.cart>p,main section figure figcaption,main h1,.message i:nth-child(1){
     text-align: center
 }
 section figure figcaption h4,figure figcaption p{
     font-weight: 500;
     margin-bottom: 20px;
 }
-header i span ,main section figure figcaption button,main section figure figcaption button i{
+header i span ,main section figure figcaption button,main section figure figcaption button i,.message i:nth-child(1){
     color: white;
+}
+header i,main section figure figcaption button,.message i:nth-child(3){
+    cursor: pointer;
+}
+header i,main section figure figcaption button{
+    position: relative;
 }
 /* !==================================================Header_style=========================================================== */
 header{
@@ -68,13 +74,8 @@ header>a img{
     width: 80px;
     height: 67px;
 }
-header i{
-    cursor: pointer;
-    position: relative;
-}
 header i span{
-    font-weight: normal;
-    font-size: 13px;
+    font: normal 13px "Rubik", sans-serif;
     background-color: #f18712;
     padding: 5px 8px;
     border-radius: 25px;
@@ -90,7 +91,6 @@ i .cart {
     border-radius: 5px;
     border: 1px solid rgba(0,0,0,0.2);
     padding-top: 23px;
-
 }
 .cart>p{
     font-weight: 500;
@@ -138,8 +138,6 @@ main section figure figcaption button{
     background-color: rgb(69, 69, 173);
     padding: 10px 15px;
     border-radius: 5px;
-    cursor: pointer;
-    position: relative;
     overflow: hidden;
     z-index: 1;
 }
@@ -164,7 +162,6 @@ main section figure figcaption button:hover .effect{
     100%{
         transform: translateX(-450px);
     }
-    
 }
 main section figure figcaption button i{
     margin-right: 3px;
@@ -175,4 +172,33 @@ section figure figcaption h4{
 section figure figcaption p{
     font-size: 20px;
     color: green;
+}
+.message{
+    position: fixed;
+    bottom: 20px;
+    right: 29px;
+    width: 535px;
+    display: none;
+    padding: 22px 9px;
+    border-left: 5px solid green;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
+    background-color: white;
+    z-index: 1000;
+}
+.message .content p:nth-child(2){
+    margin-top: 5px;
+}
+.message i:nth-child(1){
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.message i:nth-child(3){
+    position: absolute;
+    top: 16px;
+    right: 19px;
 }

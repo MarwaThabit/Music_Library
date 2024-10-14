@@ -5,9 +5,10 @@ var show_price = document.querySelector("#show_price");
 var span = document.querySelector(".number_of_items");
 var cart_Area = document.querySelector(".cart");
 var cart_icon = document.querySelector(".fa-cart-shopping");
-var price_text=document.querySelector("#price")        
-var hr=document.querySelector(".cart hr")        
-var alert_of_added_item=document.querySelector(".alert")
+var price_text=document.querySelector("#price");        
+var hr=document.querySelector(".cart hr");        
+var close=document.querySelector(".message i:nth-child(3)");
+var message=document.querySelector(".message ");
 var total_price = 0;
 var number_of_items = 0;
 
@@ -50,7 +51,7 @@ show_price.onclick = function() {
 
 cart_icon.onclick = function(event) {
     if (event.target === cart_icon) {
-        if (cart_Area.style.display === "block") {
+        if (cart_Area.style.display == "block") {
             cart_Area.style.display = "none";
         } else {
             cart_Area.style.display = "block";
@@ -62,6 +63,12 @@ products.forEach(function(item, index) {
     var btn = btns[index];
     btn.onclick = function() {
         updateCart(item, index);
-
+        message.style.display="flex";
+        message.style.justifyContent="space-between";
+        message.style.alignItems= "center";
     };
 });
+
+close.onclick=function(){
+    message.style.display="none"
+}
