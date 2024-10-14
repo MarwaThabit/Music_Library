@@ -1,0 +1,178 @@
+/* !==================================================General_style=========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: "Rubik", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    background-color: rgba(242, 239, 241, 0.5);
+}
+body::before{
+    position: fixed;
+    z-index: -1;
+    content: '';
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../Images/music-notes-stave-staff_1284-44373.avif);
+    opacity: 0.05;
+}
+/* !==================================================Common_Style=========================================================== */
+header,header>a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart i,i .cart {
+    display: none;
+}
+.cart>p,main section figure figcaption,main h1{
+    text-align: center
+}
+section figure figcaption h4,figure figcaption p{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+header i span ,main section figure figcaption button,main section figure figcaption button i{
+    color: white;
+}
+/* !==================================================Header_style=========================================================== */
+header{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(242, 239, 241) ;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    padding-inline: 10px;
+}
+header nav{
+    width: 40%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+    color: black;
+}
+header>a{
+    width: 168px;
+}
+header>a img{
+    width: 80px;
+    height: 67px;
+}
+header i{
+    cursor: pointer;
+    position: relative;
+}
+header i span{
+    font-weight: normal;
+    font-size: 13px;
+    background-color: #f18712;
+    padding: 5px 8px;
+    border-radius: 25px;
+}
+i .cart {
+    position: absolute;
+    top: 64px;
+    left: -315px;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    cursor: default;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-top: 23px;
+
+}
+.cart>p{
+    font-weight: 500;
+    margin-bottom: 45px; 
+}
+hr{
+    width: 70%;
+    margin: 64px auto 52px;
+    background-color: black;
+    border-radius: 12px;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.1);
+}
+/* !==================================================Main_style=========================================================== */
+main {
+    padding: 30px 30px 150px;
+}
+main h1{
+    margin: 135px 0 100px;
+}
+.products{
+    display: grid;  
+    grid-template-columns: repeat(auto-fill,minmax(18vw,auto));
+    gap: 55px 40px;
+}
+section figure{
+    width: 100%;
+    height: 575px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,0.2);
+    transition: 0.5s;
+}
+section figure:hover{
+    transform: scale(1.05);
+}
+main section figure img{
+    width: 100%;
+    height: 60%;
+    border-radius: 15px 15px 0 0;
+}
+main section figure figcaption{
+    padding: 8px 15px;
+}
+main section figure figcaption button{
+    background-color: rgb(69, 69, 173);
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+main section figure figcaption button .effect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(225, 225, 225,0.15);
+    height: 60px;
+    width: 20%;
+    transform: skew(45deg) translateX(150px);
+    opacity: 0;
+    z-index: -1;
+}
+main section figure figcaption button:hover .effect{
+    animation: mirror 2s linear infinite;
+}
+@keyframes mirror {
+    0%,100%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-450px);
+    }
+    
+}
+main section figure figcaption button i{
+    margin-right: 3px;
+}
+section figure figcaption h4{
+    line-height: 1.6;
+}
+section figure figcaption p{
+    font-size: 20px;
+    color: green;
+}
