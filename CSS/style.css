@@ -89,7 +89,6 @@ i .cart {
     overflow-y: auto;
     cursor: default;
     border-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.2);
     padding-top: 23px;
 }
 .cart>p{

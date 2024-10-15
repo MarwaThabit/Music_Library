@@ -5,10 +5,10 @@ var show_price = document.querySelector("#show_price");
 var span = document.querySelector(".number_of_items");
 var cart_Area = document.querySelector(".cart");
 var cart_icon = document.querySelector(".fa-cart-shopping");
-var price_text=document.querySelector("#price");        
-var hr=document.querySelector(".cart hr");        
-var close=document.querySelector(".message i:nth-child(3)");
-var message=document.querySelector(".message ");
+var price_text = document.querySelector("#price");        
+var hr = document.querySelector(".cart hr");        
+var close = document.querySelector(".message i:nth-child(3)");
+var message = document.querySelector(".message ");
 var total_price = 0;
 var number_of_items = 0;
 
@@ -29,8 +29,10 @@ function updateCart(item) {
         '</figure>';
 
     total_price += +(price.textContent); 
+    
     if(my_shopping_cart.innerHTML != ""){
         cart_Area.style.backgroundColor="rgb(242, 239, 241)";
+        cart_Area.style.border="1px solid rgba(0,0,0,0.2)";
         span.textContent = ++number_of_items;
         show_price.style.display = "block";
         show_price.style.backgroundColor = " rgb(69, 69, 173)";
@@ -50,7 +52,7 @@ show_price.onclick = function() {
 }
 
 cart_icon.onclick = function(event) {
-    if (event.target === cart_icon) {
+    if (event.target == cart_icon) {
         if (cart_Area.style.display == "block") {
             cart_Area.style.display = "none";
         } else {
